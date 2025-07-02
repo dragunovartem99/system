@@ -26,10 +26,6 @@ declare -A dict=(
 	# Anki
 	[anki]="Anki > ~/Downloads"
 
-	# Cloning
-	[clone_code]="Cloning Code"
-	[clone_misc]="Cloning Misc"
-
 	# The End
-	[the_end]="Bootstrap Task Completed"
+	[the_end]="Installation Completed"
 )
