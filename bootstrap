@@ -1,0 +1,12 @@
+#!/bin/bash
+
+. $(dirname $BASH_SOURCE)/"stages/apt"
+. $(dirname $BASH_SOURCE)/"stages/nodejs"
+. $(dirname $BASH_SOURCE)/"stages/nvim"
+
+. $(dirname $BASH_SOURCE)/"stages/deb"
+. $(dirname $BASH_SOURCE)/"stages/docker"
+
+. $(dirname $BASH_SOURCE)/"stages/anki"
+
+. $(dirname $BASH_SOURCE)/"stages/end"

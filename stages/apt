@@ -1,0 +1,91 @@
+#!/bin/bash
+
+. $(dirname $BASH_SOURCE)/"../utils/dict"
+. $(dirname $BASH_SOURCE)/"../utils/print_header"
+
+# things to run i3
+SYS_PACKAGES=(
+	xorg
+	i3
+
+	network-manager
+	pulseaudio
+	brightnessctl
+
+	pavucontrol
+	network-manager-applet
+	feh
+
+	# GTK (Graphite)
+		lxappearance
+		gnome-themes-extra
+		gtk2-engines-murrine
+		sassc
+)
+
+# mostly deps for other programs to work
+KEY_PACKAGES=(
+	gcc
+	make
+	curl
+	ffmpeg
+
+	# quickemu
+		genisoimage
+		jq
+		mesa-utils
+		qemu-system
+		socat
+		spice-client-gtk
+		swtpm
+		uuid-runtime
+		zsync
+
+	# google-chrome
+		fonts-liberation
+)
+
+DEV_PACKAGES=(
+	autojump
+	tree
+	sqlite3
+	tmux
+
+	# nvim
+		xclip
+		ripgrep
+		unzip
+		python3.13-venv
+)
+
+GUI_PACKAGES=(
+	thunar
+
+	firefox-esr
+	epiphany-browser
+	transmission
+
+	flameshot
+	obs-studio
+	shotcut
+	screenkey
+
+	atril
+	fontforge
+
+	scid
+)
+
+install_packages() {
+	local key=$1
+	shift
+	local packages=($@)
+
+	print_header ${dict[$key]}
+	sudo apt install ${packages[@]}
+}
+
+install_packages "apt_sys" ${SYS_PACKAGES[@]}
+install_packages "apt_key" ${KEY_PACKAGES[@]}
+install_packages "apt_dev" ${DEV_PACKAGES[@]}
+install_packages "apt_gui" ${GUI_PACKAGES[@]}

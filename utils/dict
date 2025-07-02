@@ -1,0 +1,35 @@
+#!/bin/bash
+
+declare -A dict=(
+	# APT
+	[apt_sys]="Install Sys APT Packages"
+	[apt_key]="Install Key APT Packages"
+	[apt_dev]="Install Dev APT Packages"
+	[apt_gui]="Install GUI APT Packages"
+
+	# .deb
+	[zoom]="Install Zoom"
+	[chrome]="Install Chrome"
+	[quickemu]="Install Quickemu"
+	[obsidian]="Install Obsidian"
+
+	# Node.js
+	[nvm]="Fetch && Install NVM"
+	[npm]="Fetch && Install NPM"
+
+	# nvim
+	[nvim]="Install Neovim"
+
+	# Docker
+	[docker]="Install Docker"
+
+	# Anki
+	[anki]="Anki > ~/Downloads"
+
+	# Cloning
+	[clone_code]="Cloning Code"
+	[clone_misc]="Cloning Misc"
+
+	# The End
+	[the_end]="Bootstrap Task Completed"
+)

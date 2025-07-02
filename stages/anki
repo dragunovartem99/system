@@ -1,0 +1,15 @@
+#!/bin/bash
+
+. $(dirname $BASH_SOURCE)/"../utils/dict"
+. $(dirname $BASH_SOURCE)/"../utils/print_header"
+
+print_header ${dict["anki"]}
+url="https://github.com/ankitects/anki/releases/download/25.02.5/anki-25.02.5-linux-qt6.tar.zst"
+
+temp_dir=$(mktemp -d)
+
+wget -q --show-progress -O "$temp_dir/anki.tar.zst" $url
+
+tar xaf "$temp_dir/anki.tar.zst" -C "$HOME/Downloads"
+
+rm -rf "$temp_dir"

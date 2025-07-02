@@ -1,0 +1,10 @@
+#!/bin/bash
+
+. $(dirname $BASH_SOURCE)/"../utils/dict"
+. $(dirname $BASH_SOURCE)/"../utils/print_header"
+
+print_header ${dict["the_end"]}
+
+echo -e "\nManual actions required:\n"
+echo -e "1. './install.sh'         | in ~/Downloads/anki-*"
+echo
