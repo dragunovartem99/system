@@ -4,9 +4,9 @@
 
 declare -A candidates=(
 	[chrome]=https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-	[obsidian]=https://github.com/obsidianmd/obsidian-releases/releases/download/v1.8.10/obsidian_1.8.10_amd64.deb
-	[quickemu]=https://github.com/quickemu-project/quickemu/releases/download/4.9.7/quickemu_4.9.7-1_all.deb
 	[discord]=https://stable.dl2.discordapp.net/apps/linux/0.0.97/discord-0.0.97.deb
+	[quickemu]=https://github.com/quickemu-project/quickemu/releases/download/4.9.7/quickemu_4.9.7-1_all.deb
+	[obsidian]=https://github.com/obsidianmd/obsidian-releases/releases/download/v1.8.10/obsidian_1.8.10_amd64.deb
 )
 
 for key in "${!candidates[@]}"; do
