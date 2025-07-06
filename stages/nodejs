@@ -5,7 +5,7 @@
 
 print_header ${dict["nvm"]}
 
-mkdir ~/.config/nvm
+mkdir "$HOME/.config/nvm"
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh | bash
 
 print_header ${dict["npm"]}

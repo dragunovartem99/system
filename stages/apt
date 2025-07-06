@@ -59,8 +59,6 @@ DEV_PACKAGES=(
 )
 
 GUI_PACKAGES=(
-	thunar
-
 	firefox-esr
 	epiphany-browser
 	transmission
@@ -70,6 +68,7 @@ GUI_PACKAGES=(
 	shotcut
 	screenkey
 
+	thunar
 	atril
 	fontforge
 
