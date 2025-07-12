@@ -1,6 +1,6 @@
 #!/bin/bash
 
-. $(dirname $BASH_SOURCE)/"../utils/dict"
+. $(dirname $BASH_SOURCE)/"../dict"
 . $(dirname $BASH_SOURCE)/"../utils/print_header"
 
 print_header ${dict["docker"]}

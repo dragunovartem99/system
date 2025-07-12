@@ -1,6 +1,6 @@
 #!/bin/bash
 
-. $(dirname $BASH_SOURCE)/"dict"
+. $(dirname $BASH_SOURCE)/"../dict"
 . $(dirname $BASH_SOURCE)/"print_header"
 
 wget_install() {
