@@ -13,4 +13,4 @@ print_header ${dict["npm"]}
 source "$NVM_DIR/nvm.sh"
 
 nvm install --lts
-npm install -g typescript nodemon sort-package-json @johnnymorganz/stylua-bin
+npm install -g pnpm@latest-10 typescript nodemon sort-package-json @johnnymorganz/stylua-bin
