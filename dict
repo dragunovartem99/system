@@ -9,6 +9,7 @@ declare -A dict=(
 
 	# .deb
 	[chrome]="Install Chrome"
+	[rocket]="Install Rocket"
 	[discord]="Install Discord"
 	[quickemu]="Install Quickemu"
 	[obsidian]="Install Obsidian"
