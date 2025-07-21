@@ -50,7 +50,6 @@ DEV_PACKAGES=(
 	tree
 	sqlite3
 	tmux
-	snapd # for rocketchat-desktop (TODO: stages/snap)
 
 	# nvim
 		xclip
