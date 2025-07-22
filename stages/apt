@@ -27,6 +27,7 @@ SYS_PACKAGES=(
 KEY_PACKAGES=(
 	gcc
 	make
+	cargo
 	curl
 	ffmpeg
 
@@ -56,6 +57,7 @@ DEV_PACKAGES=(
 		ripgrep
 		unzip
 		python3.13-venv
+		rsync
 )
 
 GUI_PACKAGES=(
