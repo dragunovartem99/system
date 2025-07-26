@@ -8,15 +8,14 @@ SYS_PACKAGES=(
 	xorg
 	i3
 
-	brightnessctl
-
 	pulseaudio
 	pavucontrol
 
 	network-manager
 	network-manager-applet
 
-	lightdm
+	brightnessctl
+
 	arandr
 	feh
 
