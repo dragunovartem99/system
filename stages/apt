@@ -8,12 +8,16 @@ SYS_PACKAGES=(
 	xorg
 	i3
 
-	network-manager
-	pulseaudio
 	brightnessctl
 
+	pulseaudio
 	pavucontrol
+
+	network-manager
 	network-manager-applet
+
+	lightdm
+	arandr
 	feh
 
 	# GTK (Graphite)
