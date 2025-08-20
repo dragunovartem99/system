@@ -6,7 +6,6 @@ GH="https://github.com"
 
 declare -A candidates=(
 	[chrome]="https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb"
-	[rocket]="$GH/RocketChat/Rocket.Chat.Electron/releases/download/4.7.1/rocketchat-4.7.1-linux-amd64.deb"
 	[discord]="https://discord.com/api/download/stable?platform=linux&format=deb"
 	[quickemu]="$GH/quickemu-project/quickemu/releases/download/4.9.7/quickemu_4.9.7-1_all.deb"
 	[obsidian]="$GH/obsidianmd/obsidian-releases/releases/download/v1.8.10/obsidian_1.8.10_amd64.deb"
