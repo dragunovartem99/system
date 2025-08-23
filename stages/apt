@@ -49,6 +49,9 @@ KEY_PACKAGES=(
 
 	# google-chrome
 		fonts-liberation
+
+	# emoji-picker
+		libxdo3
 )
 
 DEV_PACKAGES=(
