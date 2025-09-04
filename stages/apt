@@ -3,7 +3,6 @@
 . $(dirname $BASH_SOURCE)/"../dict"
 . $(dirname $BASH_SOURCE)/"../utils/print_header"
 
-# things to run i3
 SYS_PACKAGES=(
 	xorg
 	i3
@@ -21,6 +20,8 @@ SYS_PACKAGES=(
 	arandr
 	feh
 
+	ibus
+
 	# GTK (Graphite)
 		lxappearance
 		gnome-themes-extra
@@ -28,7 +29,6 @@ SYS_PACKAGES=(
 		sassc
 )
 
-# mostly deps for other programs to work
 KEY_PACKAGES=(
 	gcc
 	make
@@ -52,9 +52,6 @@ KEY_PACKAGES=(
 
 	# google-chrome
 		fonts-liberation
-
-	# emoji-picker
-		libxdo3
 )
 
 DEV_PACKAGES=(
