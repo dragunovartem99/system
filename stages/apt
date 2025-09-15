@@ -36,9 +36,6 @@ KEY_PACKAGES=(
 	curl
 	ffmpeg
 
-	# .appimage
-		libfuse2t64
-
 	# quickemu
 		genisoimage
 		jq
