@@ -2,15 +2,16 @@
 
 . $(dirname $BASH_SOURCE)/"../dict"
 . $(dirname $BASH_SOURCE)/"../utils/print_header"
+. $(dirname $BASH_SOURCE)/"../versions.conf"
 
 print_header ${dict["nvm"]}
 
 mkdir "$HOME/.config/nvm"
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh | bash
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/${NVM_VERSION}/install.sh | bash
 
 print_header ${dict["npm"]}
 
 source "$NVM_DIR/nvm.sh"
 
 nvm install --lts
-npm install -g pm2 nodemon sort-package-json @johnnymorganz/stylua-bin
+npm install -g ${NPM_GLOBAL_PACKAGES}
