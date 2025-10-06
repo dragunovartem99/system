@@ -8,6 +8,7 @@ declare -A dict=(
 	[apt_gui]="Install GUI APT Packages"
 
 	# .deb
+	[zoom]="Install Zoom"
 	[chrome]="Install Chrome"
 	[discord]="Install Discord"
 	[quickemu]="Install Quickemu"

@@ -5,6 +5,7 @@
 GH="https://github.com"
 
 declare -A candidates=(
+	[zoom]=https://zoom.us/client/6.6.0.4410/zoom_amd64.deb
 	[chrome]="https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb"
 	[discord]="https://discord.com/api/download?platform=linux&format=deb"
 	[quickemu]="$GH/quickemu-project/quickemu/releases/download/4.9.7/quickemu_4.9.7-1_all.deb"
