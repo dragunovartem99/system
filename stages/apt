@@ -49,6 +49,9 @@ KEY_PACKAGES=(
 
 	# google-chrome
 		fonts-liberation
+
+	# lc0
+		meson
 )
 
 DEV_PACKAGES=(
