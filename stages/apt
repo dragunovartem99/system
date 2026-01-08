@@ -34,6 +34,7 @@ KEY_PACKAGES=(
 	make
 	cargo
 	curl
+	wget
 	ffmpeg
 
 	# quickemu
