@@ -53,6 +53,9 @@ KEY_PACKAGES=(
 
 	# lc0
 		meson
+	
+	# zoom
+		libxcb-xtest0 
 )
 
 DEV_PACKAGES=(
