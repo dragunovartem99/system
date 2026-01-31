@@ -13,7 +13,6 @@ declare -A dict=(
 	[discord]="Install Discord"
 	[quickemu]="Install Quickemu"
 	[obsidian]="Install Obsidian"
-	[emoji-picker]="Install emoji-picker"
 
 	# Node.js
 	[nvm]="Fetch && Install NVM"
