@@ -7,6 +7,8 @@ SYS_PACKAGES=(
 	xorg
 	i3
 
+	systemd-timesyncd
+
 	pulseaudio
 	pavucontrol
 
