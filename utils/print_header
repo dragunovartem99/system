@@ -16,7 +16,7 @@ add_padding() {
 print_header() {
 	local input=$(add_padding 26 "$@")
 
-	local green='\033[0;32m'
+	local green="\033[0;32m"
 	local reset="\033[0m"
 
 	echo -e "\t${green}"
