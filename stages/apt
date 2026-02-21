@@ -71,7 +71,6 @@ DEV_PACKAGES=(
 		ripgrep
 		unzip
 		python3.13-venv
-		rsync
 )
 
 GUI_PACKAGES=(
@@ -81,7 +80,8 @@ GUI_PACKAGES=(
 
 	flameshot
 	obs-studio
-	shotcut
+	shotcut # TODO: find something better
+
 	screenkey
 
 	thunar
@@ -94,13 +94,13 @@ GUI_PACKAGES=(
 install_packages() {
 	local key=$1
 	shift
-	local packages=($@)
+	local packages=("$@")
 
-	print_header ${dict[$key]}
-	sudo apt install ${packages[@]}
+	print_header "${dict[$key]}"
+	sudo apt install "${packages[@]}"
 }
 
-install_packages "apt_sys" ${SYS_PACKAGES[@]}
-install_packages "apt_key" ${KEY_PACKAGES[@]}
-install_packages "apt_dev" ${DEV_PACKAGES[@]}
-install_packages "apt_gui" ${GUI_PACKAGES[@]}
+install_packages "apt_sys" "${SYS_PACKAGES[@]}"
+install_packages "apt_key" "${KEY_PACKAGES[@]}"
+install_packages "apt_dev" "${DEV_PACKAGES[@]}"
+install_packages "apt_gui" "${GUI_PACKAGES[@]}"
