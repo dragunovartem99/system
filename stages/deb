@@ -1,7 +1,7 @@
 #!/bin/bash
 
-. "${BASH_SOURCE%/*}"/"../dict"
-. "${BASH_SOURCE%/*}"/"../utils/print_header"
+. "${BASH_SOURCE%/*}"/"../utils/wget_install"
+. "${BASH_SOURCE%/*}"/"../versions.conf"
 
 GH="https://github.com"
 

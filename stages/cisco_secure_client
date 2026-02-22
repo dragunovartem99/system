@@ -1,5 +1,10 @@
 #!/bin/bash
 
+. "${BASH_SOURCE%/*}"/"../dict"
+. "${BASH_SOURCE%/*}"/"../utils/print_header"
+
+print_header "${dict["cisco"]}"
+
 url="https://uci.service-now.com/sys_attachment.do?sys_id=e177783eeb516e501059f2acbad0cd34"
 temp_dir=$(mktemp -d)
 

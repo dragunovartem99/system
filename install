@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -euo pipefail
+
 . "${BASH_SOURCE%/*}"/"stages/apt"
 . "${BASH_SOURCE%/*}"/"stages/deb"
 . "${BASH_SOURCE%/*}"/"stages/docker"
