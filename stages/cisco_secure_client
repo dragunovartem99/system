@@ -3,7 +3,7 @@
 url="https://uci.service-now.com/sys_attachment.do?sys_id=e177783eeb516e501059f2acbad0cd34"
 temp_dir=$(mktemp -d)
 
-wget -q --show-progress -O "$temp_dir/cisco-vpn.tar.gz" $url
+wget -q --show-progress -O "$temp_dir/cisco-vpn.tar.gz" "$url"
 tar xzvf "$temp_dir/cisco-vpn.tar.gz" -C "$temp_dir"
 
 # Find the extracted folder (assuming only one folder was extracted)

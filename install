@@ -1,8 +1,8 @@
 #!/bin/bash
 
-. $(dirname $BASH_SOURCE)/"stages/apt"
-. $(dirname $BASH_SOURCE)/"stages/deb"
-. $(dirname $BASH_SOURCE)/"stages/docker"
-. $(dirname $BASH_SOURCE)/"stages/nodejs"
-. $(dirname $BASH_SOURCE)/"stages/nvim"
-. $(dirname $BASH_SOURCE)/"stages/the_end"
+. "${BASH_SOURCE%/*}"/"stages/apt"
+. "${BASH_SOURCE%/*}"/"stages/deb"
+. "${BASH_SOURCE%/*}"/"stages/docker"
+. "${BASH_SOURCE%/*}"/"stages/nodejs"
+. "${BASH_SOURCE%/*}"/"stages/nvim"
+. "${BASH_SOURCE%/*}"/"stages/the_end"

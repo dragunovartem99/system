@@ -1,7 +1,7 @@
 #!/bin/bash
 
-. $(dirname $BASH_SOURCE)/"../dict"
-. $(dirname $BASH_SOURCE)/"../utils/print_header"
+. "${BASH_SOURCE%/*}"/"../dict"
+. "${BASH_SOURCE%/*}"/"../utils/print_header"
 
 SYS_PACKAGES=(
 	xorg

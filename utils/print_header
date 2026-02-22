@@ -3,7 +3,7 @@
 add_padding() {
 	local target_length=$1
 	shift
-	local input="$@"
+	local input="$*"
 
 	local input_length=${#input}
 	local total_spaces=$((target_length - input_length))
@@ -14,7 +14,8 @@ add_padding() {
 }
 
 print_header() {
-	local input=$(add_padding 26 "$@")
+	local input
+	input=$(add_padding 26 "$@")
 
 	local green="\033[0;32m"
 	local reset="\033[0m"

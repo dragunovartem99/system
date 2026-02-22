@@ -1,32 +1,32 @@
 #!/bin/bash
 
-declare -A dict=(
+export -A dict=(
 	# APT
-	[apt_sys]="Install Sys APT Packages"
-	[apt_key]="Install Key APT Packages"
-	[apt_dev]="Install Dev APT Packages"
-	[apt_gui]="Install GUI APT Packages"
+	["apt_sys"]="Install Sys APT Packages"
+	["apt_key"]="Install Key APT Packages"
+	["apt_dev"]="Install Dev APT Packages"
+	["apt_gui"]="Install GUI APT Packages"
 
 	# .deb
-	[zoom]="Install Zoom"
-	[chrome]="Install Chrome"
-	[discord]="Install Discord"
-	[quickemu]="Install Quickemu"
-	[obsidian]="Install Obsidian"
+	["zoom"]="Install Zoom"
+	["chrome"]="Install Chrome"
+	["discord"]="Install Discord"
+	["quickemu"]="Install Quickemu"
+	["obsidian"]="Install Obsidian"
 
 	# Node.js
-	[nvm]="Fetch && Install NVM"
-	[npm]="Fetch && Install NPM"
+	["nvm"]="Fetch && Install NVM"
+	["npm"]="Fetch && Install NPM"
 
 	# nvim
-	[nvim]="Install Neovim"
+	["nvim"]="Install Neovim"
 
 	# Docker
-	[docker]="Install Docker"
+	["docker"]="Install Docker"
 
 	# Anki
-	[anki]="Anki > ~/Downloads"
+	["anki"]="Anki > ~/Downloads"
 
 	# The End
-	[the_end]="Installation Completed"
+	["the_end"]="Installation Completed"
 )

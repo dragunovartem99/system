@@ -1,15 +1,15 @@
 #!/bin/bash
 
-. $(dirname $BASH_SOURCE)/"../dict"
-. $(dirname $BASH_SOURCE)/"../utils/print_header"
-. $(dirname $BASH_SOURCE)/"../versions.conf"
+. "${BASH_SOURCE%/*}"/"../dict"
+. "${BASH_SOURCE%/*}"/"../utils/print_header"
+. "${BASH_SOURCE%/*}"/"../versions.conf"
 
-print_header ${dict["anki"]}
+print_header "${dict["anki"]}"
 url="https://github.com/ankitects/anki/releases/download/${ANKI_VERSION}/anki-launcher-${ANKI_VERSION}-linux.tar.zst"
 
 temp_dir=$(mktemp -d)
 
-wget -q --show-progress -O "$temp_dir/anki.tar.zst" $url
+wget -q --show-progress -O "$temp_dir/anki.tar.zst" "$url"
 
 tar xaf "$temp_dir/anki.tar.zst" -C "$HOME/Downloads"
 

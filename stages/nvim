@@ -1,9 +1,9 @@
 #!/bin/bash
 
-. $(dirname $BASH_SOURCE)/"../dict"
-. $(dirname $BASH_SOURCE)/"../utils/print_header"
+. "${BASH_SOURCE%/*}"/"../dict"
+. "${BASH_SOURCE%/*}"/"../utils/print_header"
 
-print_header ${dict["nvim"]}
+print_header "${dict["nvim"]}"
 
 url="https://github.com/neovim/neovim/releases/latest/download/nvim-linux-x86_64.tar.gz"
 temp_dir=$(mktemp -d)

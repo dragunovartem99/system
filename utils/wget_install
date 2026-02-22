@@ -1,18 +1,19 @@
 #!/bin/bash
 
-. $(dirname $BASH_SOURCE)/"../dict"
-. $(dirname $BASH_SOURCE)/"print_header"
+. "${BASH_SOURCE%/*}"/"../dict"
+. "${BASH_SOURCE%/*}"/"print_header"
 
 wget_install() {
 	local key=$1
 	local url=$2
 
-	local temp_dir=$(mktemp -d)
+	local temp_dir
+	temp_dir=$(mktemp -d)
 
-	print_header ${dict[$key]}
+	print_header "${dict[$key]}"
 
 	wget -q --show-progress -O "${temp_dir}/$key.deb" "$url"
 	sudo dpkg -i "${temp_dir}/$key.deb"
 
-	rm -rf $temp_dir
+	rm -rf "$temp_dir"
 }
