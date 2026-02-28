@@ -25,10 +25,10 @@ SYS_PACKAGES=(
 	ibus
 
 	# GTK (Graphite)
-		lxappearance
-		gnome-themes-extra
-		gtk2-engines-murrine
-		sassc
+	lxappearance
+	gnome-themes-extra
+	gtk2-engines-murrine
+	sassc
 )
 
 KEY_PACKAGES=(
@@ -39,25 +39,8 @@ KEY_PACKAGES=(
 	wget
 	ffmpeg
 
-	# quickemu
-		genisoimage
-		jq
-		mesa-utils
-		qemu-system
-		socat
-		spice-client-gtk
-		swtpm
-		uuid-runtime
-		zsync
-
-	# google-chrome
-		fonts-liberation
-
 	# lc0
-		meson
-	
-	# zoom
-		libxcb-xtest0 
+	meson
 )
 
 DEV_PACKAGES=(
@@ -67,10 +50,10 @@ DEV_PACKAGES=(
 	tmux
 
 	# nvim
-		xclip
-		ripgrep
-		unzip
-		python3.13-venv
+	xclip
+	ripgrep
+	unzip
+	python3.13-venv
 )
 
 GUI_PACKAGES=(

@@ -13,7 +13,7 @@ wget_install() {
 	print_header "${dict[$key]}"
 
 	wget -q --show-progress -O "${temp_dir}/$key.deb" "$url"
-	sudo dpkg -i "${temp_dir}/$key.deb"
+	sudo apt install -y "${temp_dir}/$key.deb"
 
 	rm -rf "$temp_dir"
 }
