@@ -2,9 +2,27 @@
 
 set -euo pipefail
 
-. "${BASH_SOURCE%/*}"/"stages/apt"
-. "${BASH_SOURCE%/*}"/"stages/deb"
-. "${BASH_SOURCE%/*}"/"stages/docker"
-. "${BASH_SOURCE%/*}"/"stages/nodejs"
-. "${BASH_SOURCE%/*}"/"stages/nvim"
-. "${BASH_SOURCE%/*}"/"stages/the_end"
+STAGES_DIR="${BASH_SOURCE%/*}/stages"
+ALL=(apt deb docker nodejs nvim the_end)
+
+if [[ "${1:-}" == "--skip" ]]; then
+	shift
+	stages=()
+	for s in "${ALL[@]}"; do
+		[[ " $* " == *" $s "* ]] || stages+=("$s")
+	done
+elif [[ $# -gt 0 ]]; then
+	stages=("$@")
+else
+	stages=("${ALL[@]}")
+fi
+
+if ! sudo -v; then
+	echo "Error: sudo access is required to run this script" >&2
+	exit 1
+fi
+
+for stage in "${stages[@]}"; do
+	# shellcheck disable=SC1090 # "Non-constant" dynamic source
+	. "$STAGES_DIR/$stage"
+done
