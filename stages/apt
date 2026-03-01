@@ -3,76 +3,10 @@
 . "${BASH_SOURCE%/*}"/"../dict"
 . "${BASH_SOURCE%/*}"/"../utils/print_header"
 
-SYS_PACKAGES=(
-	xorg
-	i3
-
-	systemd-timesyncd
-
-	pulseaudio
-	pavucontrol
-
-	network-manager
-	network-manager-applet
-
-	libnotify-bin
-
-	brightnessctl
-
-	arandr
-	feh
-
-	ibus
-
-	# GTK (Graphite)
-	lxappearance
-	gnome-themes-extra
-	gtk2-engines-murrine
-	sassc
-)
-
-KEY_PACKAGES=(
-	gcc
-	make
-	cargo
-	curl
-	wget
-	ffmpeg
-
-	# lc0
-	meson
-)
-
-DEV_PACKAGES=(
-	autojump
-	tree
-	sqlite3
-	tmux
-
-	# nvim
-	xclip
-	ripgrep
-	unzip
-	python3.13-venv
-)
-
-GUI_PACKAGES=(
-	firefox-esr
-	epiphany-browser
-	transmission
-
-	flameshot
-	obs-studio
-	shotcut # TODO: find something better
-
-	screenkey
-
-	thunar
-	atril
-	fontforge
-
-	scid
-)
+. "${BASH_SOURCE%/*}"/"apt.d/sys"
+. "${BASH_SOURCE%/*}"/"apt.d/key"
+. "${BASH_SOURCE%/*}"/"apt.d/dev"
+. "${BASH_SOURCE%/*}"/"apt.d/gui"
 
 install_packages() {
 	local key=$1

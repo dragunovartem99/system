@@ -1,0 +1,14 @@
+#!/bin/bash
+
+export DEV_PACKAGES=(
+	autojump
+	tree
+	sqlite3
+	tmux
+
+	# nvim
+	xclip
+	ripgrep
+	unzip
+	python3.13-venv
+)

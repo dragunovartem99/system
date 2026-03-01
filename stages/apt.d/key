@@ -1,0 +1,13 @@
+#!/bin/bash
+
+export KEY_PACKAGES=(
+	gcc
+	make
+	cargo
+	curl
+	wget
+	ffmpeg
+
+	# lc0
+	meson
+)

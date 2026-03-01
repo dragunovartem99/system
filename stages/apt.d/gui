@@ -1,0 +1,19 @@
+#!/bin/bash
+
+export GUI_PACKAGES=(
+	firefox-esr
+	epiphany-browser
+	transmission
+
+	flameshot
+	obs-studio
+	shotcut # TODO: find something better
+
+	screenkey
+
+	thunar
+	atril
+	fontforge
+
+	scid
+)

@@ -1,0 +1,29 @@
+#!/bin/bash
+
+export SYS_PACKAGES=(
+	xorg
+	i3
+
+	systemd-timesyncd
+
+	pulseaudio
+	pavucontrol
+
+	network-manager
+	network-manager-applet
+
+	libnotify-bin
+
+	brightnessctl
+
+	arandr
+	feh
+
+	ibus
+
+	# GTK (Graphite)
+	lxappearance
+	gnome-themes-extra
+	gtk2-engines-murrine
+	sassc
+)
