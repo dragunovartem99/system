@@ -9,7 +9,7 @@ export -A dict=(
 
 	# .deb
 	["zoom"]="Install Zoom"
-	["chrome"]="Install Chrome"
+	["google-chrome-stable"]="Install Chrome"
 	["discord"]="Install Discord"
 	["quickemu"]="Install Quickemu"
 	["obsidian"]="Install Obsidian"

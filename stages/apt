@@ -80,7 +80,7 @@ install_packages() {
 	local packages=("$@")
 
 	print_header "${dict[$key]}"
-	sudo apt install "${packages[@]}"
+	sudo apt install -y "${packages[@]}"
 }
 
 install_packages "apt_sys" "${SYS_PACKAGES[@]}"

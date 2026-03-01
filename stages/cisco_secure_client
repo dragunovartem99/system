@@ -14,5 +14,5 @@ tar xzvf "$temp_dir/cisco-vpn.tar.gz" -C "$temp_dir"
 # Find the extracted folder (assuming only one folder was extracted)
 vpn_dir=$(find "$temp_dir" -mindepth 1 -maxdepth 1 -type d | head -1)
 
-cd "$vpn_dir/vpn" && sudo ./vpn_install.sh
+(cd "$vpn_dir/vpn" && sudo ./vpn_install.sh)
 rm -rf "$temp_dir"

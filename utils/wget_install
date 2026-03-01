@@ -7,6 +7,11 @@ wget_install() {
 	local key=$1
 	local url=$2
 
+	if dpkg-query -W -f='${Status}' "$key" 2>/dev/null | grep -q "install ok installed"; then
+		echo "$key is already installed, skipping"
+		return
+	fi
+
 	local temp_dir
 	temp_dir=$(mktemp -d)
 

@@ -6,11 +6,11 @@
 GH="https://github.com"
 
 declare -A candidates=(
-	[zoom]="https://zoom.us/client/${ZOOM_VERSION}/zoom_amd64.deb"
-	[chrome]="https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb"
-	[discord]="https://discord.com/api/download?platform=linux&format=deb"
-	[quickemu]="$GH/quickemu-project/quickemu/releases/download/${QUICKEMU_VERSION}/quickemu_${QUICKEMU_VERSION}-1_all.deb"
-	[obsidian]="$GH/obsidianmd/obsidian-releases/releases/download/v${OBSIDIAN_VERSION}/obsidian_${OBSIDIAN_VERSION}_amd64.deb"
+	["zoom"]="https://zoom.us/client/${ZOOM_VERSION}/zoom_amd64.deb"
+	["google-chrome-stable"]="https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb"
+	["discord"]="https://discord.com/api/download?platform=linux&format=deb"
+	["quickemu"]="$GH/quickemu-project/quickemu/releases/download/${QUICKEMU_VERSION}/quickemu_${QUICKEMU_VERSION}-1_all.deb"
+	["obsidian"]="$GH/obsidianmd/obsidian-releases/releases/download/v${OBSIDIAN_VERSION}/obsidian_${OBSIDIAN_VERSION}_amd64.deb"
 )
 
 for key in "${!candidates[@]}"; do
