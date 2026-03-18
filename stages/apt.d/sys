@@ -21,9 +21,14 @@ export SYS_PACKAGES=(
 
 	ibus
 
-	# GTK (Graphite)
+	# GTK
 	lxappearance
 	gnome-themes-extra
 	gtk2-engines-murrine
 	sassc
+
+	# QT
+	kvantummanager
+	qt6-style-kvantum
+	qt5-style-kvantum
 )

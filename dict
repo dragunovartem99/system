@@ -13,6 +13,7 @@ export -A dict=(
 	["discord"]="Install Discord"
 	["quickemu"]="Install Quickemu"
 	["obsidian"]="Install Obsidian"
+	["typora"]="Install Typora.io"
 
 	# Node.js
 	["nvm"]="Fetch && Install NVM"
