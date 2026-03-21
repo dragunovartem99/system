@@ -14,5 +14,3 @@ print_header "${dict["npm"]}"
 source "$NVM_DIR/nvm.sh"
 
 nvm install --lts
-
-npm install -g pm2 nodemon @johnnymorganz/stylua-bin tree-sitter-cli
