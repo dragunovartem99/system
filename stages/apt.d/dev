@@ -5,6 +5,7 @@ export DEV_PACKAGES=(
 	tree
 	sqlite3
 	tmux
+	fzf
 
 	# nvim
 	xclip

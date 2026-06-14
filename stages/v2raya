@@ -12,9 +12,3 @@ wget_install "v2raya" \
 
 print_header "${dict["xray"]}"
 sudo bash -c "$(curl -L "$GH/XTLS/Xray-install/raw/main/install-release.sh")" -- install
-
-sudo systemctl stop xray 2>/dev/null || true
-sudo systemctl disable xray 2>/dev/null || true
-
-sudo systemctl enable --now v2raya
-sudo systemctl restart v2raya
