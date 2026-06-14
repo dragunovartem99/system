@@ -7,7 +7,6 @@ export GUI_PACKAGES=(
 
 	flameshot
 	obs-studio
-	shotcut # TODO: find something better
 
 	screenkey
 
