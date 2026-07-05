@@ -6,10 +6,17 @@
 wget_install() {
 	local key=$1
 	local url=$2
+	local version=$3
 
-	if dpkg-query -W -f='${Status}' "$key" 2>/dev/null | grep -q "install ok installed"; then
-		echo "$key is already installed, skipping"
-		return
+	local installed_version
+	installed_version=$(dpkg-query -W -f='${Version}' "$key" 2> /dev/null)
+
+	if [[ -n "$installed_version" ]]; then
+		if [[ -z "$version" || "$installed_version" == "$version"* ]]; then
+			echo "$key is already installed, skipping"
+			return
+		fi
+		echo "$key is installed ($installed_version) but $version is available, updating"
 	fi
 
 	local temp_dir

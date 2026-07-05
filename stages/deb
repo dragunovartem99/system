@@ -1,19 +1,26 @@
 #!/bin/bash
 
 . "${BASH_SOURCE%/*}"/"../utils/wget_install"
+. "${BASH_SOURCE%/*}"/"../utils/gh_latest_version"
 . "${BASH_SOURCE%/*}"/"../versions.conf"
 
 GH="https://github.com"
 
+declare -A versions=(
+	["typora"]="$TYPORA_VERSION"
+	["quickemu"]="$(gh_latest_version quickemu-project/quickemu)"
+	["obsidian"]="$(gh_latest_version obsidianmd/obsidian-releases)"
+)
+
 declare -A candidates=(
-	["zoom"]="https://zoom.us/client/${ZOOM_VERSION}/zoom_amd64.deb"
+	["zoom"]="https://zoom.us/client/latest/zoom_amd64.deb"
 	["google-chrome-stable"]="https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb"
 	["discord"]="https://discord.com/api/download?platform=linux&format=deb"
-	["typora"]="https://downloads.typora.io/linux/typora_${TYPORA_VERSION}_amd64.deb"
-	["quickemu"]="$GH/quickemu-project/quickemu/releases/download/${QUICKEMU_VERSION}/quickemu_${QUICKEMU_VERSION}-1_all.deb"
-	["obsidian"]="$GH/obsidianmd/obsidian-releases/releases/download/v${OBSIDIAN_VERSION}/obsidian_${OBSIDIAN_VERSION}_amd64.deb"
+	["typora"]="https://downloads.typora.io/linux/typora_${versions[typora]}_amd64.deb"
+	["quickemu"]="$GH/quickemu-project/quickemu/releases/download/${versions[quickemu]}/quickemu_${versions[quickemu]}-1_all.deb"
+	["obsidian"]="$GH/obsidianmd/obsidian-releases/releases/download/v${versions[obsidian]}/obsidian_${versions[obsidian]}_amd64.deb"
 )
 
 for key in "${!candidates[@]}"; do
-	wget_install "$key" "${candidates[$key]}"
+	wget_install "$key" "${candidates[$key]}" "${versions[$key]}"
 done

@@ -1,0 +1,11 @@
+#!/bin/bash
+
+# Resolve the tag "owner/repo"'s GitHub /releases/latest redirects to, with any leading "v" stripped.
+gh_latest_version() {
+	local repo=$1
+
+	curl -sI "https://github.com/$repo/releases/latest" |
+		grep -i '^location:' |
+		sed -E 's#.*/tag/v?([^/[:space:]]+).*#\1#' |
+		tr -d '\r'
+}

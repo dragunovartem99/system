@@ -2,10 +2,11 @@
 
 . "${BASH_SOURCE%/*}"/"../dict"
 . "${BASH_SOURCE%/*}"/"../utils/print_header"
-. "${BASH_SOURCE%/*}"/"../versions.conf"
+. "${BASH_SOURCE%/*}"/"../utils/gh_latest_version"
 
 print_header "${dict["anki"]}"
-url="https://github.com/ankitects/anki/releases/download/${ANKI_VERSION}/anki-launcher-${ANKI_VERSION}-linux.tar.zst"
+version=$(gh_latest_version ankitects/anki)
+url="https://github.com/ankitects/anki/releases/download/${version}/anki-launcher-${version}-linux.tar.zst"
 
 temp_dir=$(mktemp -d)
 

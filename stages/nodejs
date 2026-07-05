@@ -2,12 +2,14 @@
 
 . "${BASH_SOURCE%/*}"/"../dict"
 . "${BASH_SOURCE%/*}"/"../utils/print_header"
-. "${BASH_SOURCE%/*}"/"../versions.conf"
+. "${BASH_SOURCE%/*}"/"../utils/gh_latest_version"
 
 print_header "${dict["nvm"]}"
 
+nvm_version=$(gh_latest_version nvm-sh/nvm)
+
 mkdir "$HOME/.config/nvm"
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/"${NVM_VERSION}"/install.sh | bash
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v"${nvm_version}"/install.sh | bash
 
 print_header "${dict["npm"]}"
 
