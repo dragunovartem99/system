@@ -12,4 +12,9 @@ export DEV_PACKAGES=(
 	ripgrep
 	unzip
 	python3.13-venv
+
+	# books
+	djvulibre-bin
+	tesseract-ocr
+	tesseract-ocr-rus
 )
