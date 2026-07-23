@@ -11,4 +11,5 @@ export KEY_PACKAGES=(
 
 	# lc0
 	meson
+	libopenblas-dev
 )
