@@ -3,6 +3,7 @@
 export KEY_PACKAGES=(
 	gcc
 	make
+	cmake
 	cargo
 	curl
 	wget
