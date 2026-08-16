@@ -3,7 +3,7 @@
 export GUI_PACKAGES=(
 	firefox-esr
 	epiphany-browser
-	transmission
+	deluge
 
 	flameshot
 	obs-studio
