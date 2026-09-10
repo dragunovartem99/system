@@ -11,6 +11,7 @@ export SYS_PACKAGES=(
 
 	network-manager
 	network-manager-applet
+	network-manager-openvpn-gnome
 	dnsutils
 
 	libnotify-bin

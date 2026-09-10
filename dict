@@ -32,9 +32,6 @@ export -A dict=(
 	["v2raya"]="Install v2rayA"
 	["xray"]="Install Xray-core"
 
-	# Cisco
-	["cisco"]="Install Cisco Client"
-
 	# The End
 	["the_end"]="Installation Completed"
 )
