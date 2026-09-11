@@ -28,10 +28,6 @@ export -A dict=(
 	# Anki
 	["anki"]="Anki > ~/Downloads"
 
-	# v2rayA
-	["v2raya"]="Install v2rayA"
-	["xray"]="Install Xray-core"
-
 	# The End
 	["the_end"]="Installation Completed"
 )
