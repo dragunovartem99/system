@@ -12,4 +12,10 @@ export KEY_PACKAGES=(
 	# lc0
 	meson
 	libopenblas-dev
+
+	# wasm
+	clang
+	lld
+	clang-format-19
+	clang-tidy-19
 )
