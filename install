@@ -3,7 +3,7 @@
 set -euo pipefail
 
 STAGES_DIR="${BASH_SOURCE%/*}/stages"
-ALL=(apt deb docker nodejs nvim the_end)
+ALL=(llvm apt deb docker nodejs nvim the_end)
 
 if [[ "${1:-}" == "--skip" ]]; then
 	shift

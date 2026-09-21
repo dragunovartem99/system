@@ -14,8 +14,10 @@ export KEY_PACKAGES=(
 	libopenblas-dev
 
 	# wasm
-	clang
-	lld
-	clang-format-19
-	clang-tidy-19
+	clang-22
+	lld-22
+	llvm-22
+	clang-tidy-22
+	clang-format-22
+	libclang-rt-22-dev
 )

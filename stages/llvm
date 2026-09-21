@@ -1,0 +1,24 @@
+#!/bin/bash
+
+. "${BASH_SOURCE%/*}"/"../dict"
+. "${BASH_SOURCE%/*}"/"../utils/print_header"
+
+print_header "${dict["llvm"]}"
+
+# https://apt.llvm.org — Debian ships 19, the repo carries the newer stable branches
+
+sudo apt update
+sudo apt install -y ca-certificates curl
+sudo install -m 0755 -d /etc/apt/keyrings
+sudo curl -fsSL https://apt.llvm.org/llvm-snapshot.gpg.key -o /etc/apt/keyrings/llvm.asc
+sudo chmod a+r /etc/apt/keyrings/llvm.asc
+
+sudo tee /etc/apt/sources.list.d/llvm.sources << EOL
+Types: deb
+URIs: https://apt.llvm.org/$(. /etc/os-release && echo "$VERSION_CODENAME")
+Suites: llvm-toolchain-$(. /etc/os-release && echo "$VERSION_CODENAME")-22
+Components: main
+Signed-By: /etc/apt/keyrings/llvm.asc
+EOL
+
+sudo apt update
