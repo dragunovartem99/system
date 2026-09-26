@@ -6,6 +6,7 @@ export DEV_PACKAGES=(
 	sqlite3
 	tmux
 	fzf
+	asciinema
 
 	gh
 	glab
