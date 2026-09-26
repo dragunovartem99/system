@@ -4,6 +4,16 @@ Automated installation of essential system packages from scratch (Debian 13 and 
 
 <img src="preview.png" alt="Braille-art header over the words Installation Completed" width="384">
 
+## Usage
+
+```sh
+./install                  # every stage: llvm apt deb docker nodejs nvim the_end
+./install nodejs nvim      # only these stages
+./install --skip docker    # all but these
+```
+
+Needs `sudo`. Each stage is a script in [`stages/`](stages)
+
 ## Recording the preview
 
 With [asciinema](https://asciinema.org) and [agg](https://github.com/asciinema/agg), in Tomorrow Night colors,
