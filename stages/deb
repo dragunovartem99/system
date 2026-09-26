@@ -10,6 +10,7 @@ declare -A versions=(
 	["typora"]="$TYPORA_VERSION"
 	["quickemu"]="$(gh_latest_version quickemu-project/quickemu)"
 	["obsidian"]="$(gh_latest_version obsidianmd/obsidian-releases)"
+	["happ"]="$(gh_latest_version Happ-proxy/happ-desktop)"
 )
 
 declare -A candidates=(
@@ -19,6 +20,7 @@ declare -A candidates=(
 	["typora"]="https://downloads.typora.io/linux/typora_${versions[typora]}_amd64.deb"
 	["quickemu"]="$GH/quickemu-project/quickemu/releases/download/${versions[quickemu]}/quickemu_${versions[quickemu]}-1_all.deb"
 	["obsidian"]="$GH/obsidianmd/obsidian-releases/releases/download/v${versions[obsidian]}/obsidian_${versions[obsidian]}_amd64.deb"
+	["happ"]="$GH/Happ-proxy/happ-desktop/releases/download/${versions[happ]}/Happ.linux.x64.deb"
 )
 
 for key in "${!candidates[@]}"; do
