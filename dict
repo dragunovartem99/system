@@ -29,6 +29,9 @@ export -A dict=(
 	# Docker
 	["docker"]="Install Docker"
 
+	# Wine
+	["wine"]="Install Wine"
+
 	# Anki
 	["anki"]="Anki > ~/Downloads"
 
