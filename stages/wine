@@ -1,0 +1,15 @@
+#!/bin/bash
+
+. "${BASH_SOURCE%/*}"/"../dict"
+. "${BASH_SOURCE%/*}"/"../utils/print_header"
+
+print_header "${dict["wine"]}"
+
+# 32-bit libs are needed by most Windows installers
+sudo dpkg --add-architecture i386
+sudo apt update
+sudo apt install -y wine wine64 wine32:i386 cabextract
+
+# Debian keeps winetricks in contrib — take the upstream script instead
+sudo curl -fsSL https://raw.githubusercontent.com/Winetricks/winetricks/master/src/winetricks -o /usr/local/bin/winetricks
+sudo chmod +x /usr/local/bin/winetricks
