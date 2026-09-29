@@ -17,6 +17,7 @@ export SYS_PACKAGES=(
 	libnotify-bin
 
 	brightnessctl
+	xinput
 
 	arandr
 	feh
