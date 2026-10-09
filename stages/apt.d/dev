@@ -11,6 +11,10 @@ export DEV_PACKAGES=(
 	gh
 	glab
 
+	# infra
+	age
+	yq
+
 	# nvim
 	xclip
 	ripgrep
