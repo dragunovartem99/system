@@ -8,7 +8,8 @@ print_header "${dict["nvm"]}"
 
 nvm_version=$(gh_latest_version nvm-sh/nvm)
 
-mkdir "$HOME/.config/nvm"
+export NVM_DIR="$HOME/.config/nvm"
+mkdir -p "$NVM_DIR"
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v"${nvm_version}"/install.sh | bash
 
 print_header "${dict["npm"]}"
