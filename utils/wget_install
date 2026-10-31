@@ -9,7 +9,7 @@ wget_install() {
 	local version=$3
 
 	local installed_version
-	installed_version=$(dpkg-query -W -f='${Version}' "$key" 2> /dev/null)
+	installed_version=$(dpkg-query -W -f='${Version}' "$key" 2> /dev/null) || installed_version=""
 
 	if [[ -n "$installed_version" ]]; then
 		if [[ -z "$version" || "$installed_version" == "$version"* ]]; then
