@@ -17,3 +17,6 @@ print_header "${dict["npm"]}"
 source "$NVM_DIR/nvm.sh"
 
 nvm install --lts
+
+npm install -g playwright
+playwright install chromium
